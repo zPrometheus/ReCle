@@ -41,6 +41,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
@@ -87,9 +88,23 @@
     <QtRcc Include="ReClem.qrc" />
     <QtUic Include="ReClem.ui" />
     <QtMoc Include="ReClem.h" />
+    <ClCompile Include="src\playlist\PlaylistContainer.cpp" />
+    <ClCompile Include="src\playlist\PlaylistTabBar.cpp" />
     <ClCompile Include="ReClem.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="src\playlist\playlistcontainer.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\playlist\PlaylistTabBar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\playlist\PlaylistContainer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReClem.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

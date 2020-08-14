@@ -16,7 +16,9 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
+#include "playlist/PlaylistContainer.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -24,9 +26,19 @@ class Ui_ReClemClass
 {
 public:
     QWidget *centralWidget;
-    QWidget *widget;
-    QWidget *widget_2;
-    QFrame *frame;
+    QWidget *player_controls_container;
+    QWidget *status_bar;
+    QFrame *player_controls;
+    QToolButton *clear_playlist_button;
+    QFrame *line;
+    QToolButton *back_button;
+    QToolButton *pause_play_button;
+    QToolButton *stop_button;
+    QToolButton *forward_button;
+    QToolButton *love_button;
+    QFrame *line_2;
+    QWidget *analyzer;
+    PlaylistContainer *playlist;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -38,17 +50,51 @@ public:
         ReClemClass->resize(1013, 658);
         centralWidget = new QWidget(ReClemClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(-1, 529, 1011, 61));
-        widget_2 = new QWidget(widget);
-        widget_2->setObjectName(QStringLiteral("widget_2"));
-        widget_2->setGeometry(QRect(0, 30, 1011, 31));
-        frame = new QFrame(widget);
-        frame->setObjectName(QStringLiteral("frame"));
-        frame->setGeometry(QRect(0, 0, 1011, 31));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
+        player_controls_container = new QWidget(centralWidget);
+        player_controls_container->setObjectName(QStringLiteral("player_controls_container"));
+        player_controls_container->setGeometry(QRect(-1, 529, 1011, 51));
+        status_bar = new QWidget(player_controls_container);
+        status_bar->setObjectName(QStringLiteral("status_bar"));
+        status_bar->setGeometry(QRect(0, 30, 1011, 21));
+        player_controls = new QFrame(player_controls_container);
+        player_controls->setObjectName(QStringLiteral("player_controls"));
+        player_controls->setGeometry(QRect(0, 0, 1011, 31));
+        player_controls->setFrameShape(QFrame::StyledPanel);
+        player_controls->setFrameShadow(QFrame::Raised);
+        clear_playlist_button = new QToolButton(player_controls);
+        clear_playlist_button->setObjectName(QStringLiteral("clear_playlist_button"));
+        clear_playlist_button->setGeometry(QRect(0, 0, 31, 31));
+        line = new QFrame(player_controls);
+        line->setObjectName(QStringLiteral("line"));
+        line->setGeometry(QRect(20, 0, 16, 31));
+        line->setFrameShape(QFrame::VLine);
+        line->setFrameShadow(QFrame::Sunken);
+        back_button = new QToolButton(player_controls);
+        back_button->setObjectName(QStringLiteral("back_button"));
+        back_button->setGeometry(QRect(30, 0, 31, 31));
+        pause_play_button = new QToolButton(player_controls);
+        pause_play_button->setObjectName(QStringLiteral("pause_play_button"));
+        pause_play_button->setGeometry(QRect(60, 0, 31, 31));
+        stop_button = new QToolButton(player_controls);
+        stop_button->setObjectName(QStringLiteral("stop_button"));
+        stop_button->setGeometry(QRect(90, 0, 41, 31));
+        forward_button = new QToolButton(player_controls);
+        forward_button->setObjectName(QStringLiteral("forward_button"));
+        forward_button->setGeometry(QRect(130, 0, 31, 31));
+        love_button = new QToolButton(player_controls);
+        love_button->setObjectName(QStringLiteral("love_button"));
+        love_button->setGeometry(QRect(160, 0, 31, 31));
+        line_2 = new QFrame(player_controls);
+        line_2->setObjectName(QStringLiteral("line_2"));
+        line_2->setGeometry(QRect(180, 0, 16, 31));
+        line_2->setFrameShape(QFrame::VLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+        analyzer = new QWidget(player_controls);
+        analyzer->setObjectName(QStringLiteral("analyzer"));
+        analyzer->setGeometry(QRect(190, 0, 681, 31));
+        playlist = new PlaylistContainer(centralWidget);
+        playlist->setObjectName(QStringLiteral("playlist"));
+        playlist->setGeometry(QRect(-1, 0, 1011, 531));
         ReClemClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ReClemClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -69,6 +115,12 @@ public:
     void retranslateUi(QMainWindow *ReClemClass)
     {
         ReClemClass->setWindowTitle(QApplication::translate("ReClemClass", "ReClem", nullptr));
+        clear_playlist_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
+        back_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
+        pause_play_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
+        stop_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
+        forward_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
+        love_button->setText(QApplication::translate("ReClemClass", "...", nullptr));
     } // retranslateUi
 
 };

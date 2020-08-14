@@ -27,18 +27,18 @@
     <QtRcc Include="ReClem.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-    <QtUic Include="ReClem.ui">
-      <Filter>Resource Files</Filter>
-    </QtUic>
-    <QtMoc Include="ReClem.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="ReClem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistTabBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReClem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -46,5 +46,29 @@
     <QtUic Include="src\playlist\playlistcontainer.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="ReClem.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\playlist\PlaylistContainer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistTabBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ReClem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReClem.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
