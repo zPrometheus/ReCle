@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>playlistcontainer</class>
+ <widget class="QWidget" name="playlistcontainer">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>959</width>
-    <height>616</height>
+    <width>954</width>
+    <height>844</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
     <rect>
      <x>-10</x>
      <y>10</y>
-     <width>961</width>
+     <width>1001</width>
      <height>31</height>
     </rect>
    </property>
@@ -109,7 +109,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>991</width>
+     <width>1161</width>
      <height>16</height>
     </rect>
    </property>
