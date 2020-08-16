@@ -11,5 +11,8 @@ public:
     ReClem(QWidget *parent = Q_NULLPTR);
 
 private:
-    Ui::ReClemClass ui;
+    Ui_ReClemClass* ui;
+    PlaylistContainer* mPlaylist;
+
+
 };
