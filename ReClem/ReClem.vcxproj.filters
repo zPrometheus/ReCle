@@ -41,6 +41,15 @@
     <ClCompile Include="ReClem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Appearance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\playlist\playlistcontainer.ui">
@@ -60,9 +69,18 @@
     <QtMoc Include="ReClem.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="src\core\Application.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\playlist\PlaylistView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Appearance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

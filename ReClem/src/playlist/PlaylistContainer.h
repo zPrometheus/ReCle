@@ -3,6 +3,8 @@
 
 class Ui_playlistcontainer;
 class QLabel;
+class QTimeLine;
+class Application;
 
 class PlaylistContainer :public QWidget
 {
@@ -17,6 +19,15 @@ private:
 	QAction* mUndo;
 	QAction* mRedo;
 	QLabel* mNoMatchesLabel;
+	QTimeLine* mTabBarAnimation;
 
+	bool mDirty;
+	Application* mApp;
+
+	private slots:
+	void SetTabBarHeight(int height);
+	void DirtyTabBar(void);
+
+	
 };
 

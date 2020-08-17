@@ -20,7 +20,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Form
+class Ui_playlistcontainer
 {
 public:
     PlaylistView *playlist;
@@ -32,17 +32,17 @@ public:
     QToolButton *redo;
     PlaylistTabBar *tab_bar;
 
-    void setupUi(QWidget *Form)
+    void setupUi(QWidget *playlistcontainer)
     {
-        if (Form->objectName().isEmpty())
-            Form->setObjectName(QStringLiteral("Form"));
-        Form->resize(959, 616);
-        playlist = new PlaylistView(Form);
+        if (playlistcontainer->objectName().isEmpty())
+            playlistcontainer->setObjectName(QStringLiteral("playlistcontainer"));
+        playlistcontainer->resize(954, 844);
+        playlist = new PlaylistView(playlistcontainer);
         playlist->setObjectName(QStringLiteral("playlist"));
         playlist->setGeometry(QRect(-10, 40, 961, 731));
-        toolbar = new QFrame(Form);
+        toolbar = new QFrame(playlistcontainer);
         toolbar->setObjectName(QStringLiteral("toolbar"));
-        toolbar->setGeometry(QRect(-10, 10, 961, 31));
+        toolbar->setGeometry(QRect(-10, 10, 1001, 31));
         toolbar->setFrameShape(QFrame::StyledPanel);
         toolbar->setFrameShadow(QFrame::Raised);
         create_new = new QToolButton(toolbar);
@@ -60,29 +60,29 @@ public:
         redo = new QToolButton(toolbar);
         redo->setObjectName(QStringLiteral("redo"));
         redo->setGeometry(QRect(130, 0, 31, 31));
-        tab_bar = new PlaylistTabBar(Form);
+        tab_bar = new PlaylistTabBar(playlistcontainer);
         tab_bar->setObjectName(QStringLiteral("tab_bar"));
-        tab_bar->setGeometry(QRect(0, 0, 991, 16));
+        tab_bar->setGeometry(QRect(0, 0, 1161, 16));
 
-        retranslateUi(Form);
+        retranslateUi(playlistcontainer);
 
-        QMetaObject::connectSlotsByName(Form);
+        QMetaObject::connectSlotsByName(playlistcontainer);
     } // setupUi
 
-    void retranslateUi(QWidget *Form)
+    void retranslateUi(QWidget *playlistcontainer)
     {
-        Form->setWindowTitle(QApplication::translate("Form", "Form", nullptr));
-        create_new->setText(QApplication::translate("Form", "...", nullptr));
-        load->setText(QApplication::translate("Form", "...", nullptr));
-        save->setText(QApplication::translate("Form", "...", nullptr));
-        undo->setText(QApplication::translate("Form", "...", nullptr));
-        redo->setText(QApplication::translate("Form", "...", nullptr));
+        playlistcontainer->setWindowTitle(QApplication::translate("playlistcontainer", "Form", nullptr));
+        create_new->setText(QApplication::translate("playlistcontainer", "...", nullptr));
+        load->setText(QApplication::translate("playlistcontainer", "...", nullptr));
+        save->setText(QApplication::translate("playlistcontainer", "...", nullptr));
+        undo->setText(QApplication::translate("playlistcontainer", "...", nullptr));
+        redo->setText(QApplication::translate("playlistcontainer", "...", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Form: public Ui_Form {};
+    class playlistcontainer: public Ui_playlistcontainer {};
 } // namespace Ui
 
 QT_END_NAMESPACE

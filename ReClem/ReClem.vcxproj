@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
@@ -11,20 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5A72F2CB-6614-4FC9-B3D1-C1E3DF58553F}</ProjectGuid>
+    <ProjectGuid>{ADD18067-197F-4CB4-B3ED-131FD8CAB536}</ProjectGuid>
     <Keyword>QtVS_v303</Keyword>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.18362.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.18362.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -43,17 +41,17 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>E:\cpp\code\ReClem\src;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>msvc2017_64</QtInstall>
+    <QtInstall>D:\Soft\Qt\5.11.2\msvc2015_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>msvc2017_64</QtInstall>
+    <QtInstall>D:\Soft\Qt\5.11.2\msvc2015_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -87,28 +85,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\Application.cpp" />
+    <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
-    <ClCompile Include="src\playlist\PlaylistContainer.cpp" />
-    <ClCompile Include="src\playlist\PlaylistTabBar.cpp" />
     <QtRcc Include="ReClem.qrc" />
     <QtUic Include="ReClem.ui" />
     <QtMoc Include="ReClem.h" />
+    <ClCompile Include="src\playlist\PlaylistContainer.cpp" />
+    <ClCompile Include="src\playlist\PlaylistTabBar.cpp" />
     <ClCompile Include="ReClem.cpp" />
     <ClCompile Include="main.cpp" />
     <QtUic Include="src\playlist\playlistcontainer.ui" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="src\playlist\PlaylistContainer.h" />
-  </ItemGroup>
-  <ItemGroup>
     <QtMoc Include="src\playlist\PlaylistTabBar.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ReClem.rc" />
+    <QtMoc Include="src\playlist\PlaylistContainer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\playlist\PlaylistView.h" />
+    <QtMoc Include="src\core\Application.h" />
+    <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="src\playlist\PlaylistView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReClem.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

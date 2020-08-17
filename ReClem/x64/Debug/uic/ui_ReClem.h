@@ -98,7 +98,7 @@ public:
         ReClemClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ReClemClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1013, 23));
+        menuBar->setGeometry(QRect(0, 0, 1013, 26));
         ReClemClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ReClemClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
