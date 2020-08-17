@@ -2,6 +2,25 @@
 
 #include <qobject.h>
 
+#include <memory>
+#include <qtimer.h>
+#include "core/Appearance.h"
+#include "core/Application.h"
+
+class Application;
+
+class ApplicationImpl {
+public:
+	ApplicationImpl(Application* app)
+		:mSettingsTimer(app) {
+
+
+	}
+	
+	QTimer mSettingsTimer;
+};
+
+
 class Application:public QObject
 {
 	Q_OBJECT
@@ -11,5 +30,8 @@ public:
 
 
 	void DirtySettings();
+
+private :
+	std::unique_ptr<ApplicationImpl> mP;
 };
 
