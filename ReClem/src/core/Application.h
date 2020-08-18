@@ -8,17 +8,7 @@
 #include "core/Application.h"
 
 class Application;
-
-class ApplicationImpl {
-public:
-	ApplicationImpl(Application* app)
-		:mSettingsTimer(app) {
-
-
-	}
-	
-	QTimer mSettingsTimer;
-};
+class ApplicationImpl;
 
 
 class Application:public QObject

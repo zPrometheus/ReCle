@@ -41,7 +41,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Data\vs\code\ReClem\ReClem\3rdparty;D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
@@ -85,6 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3rdparty\qocoa\SearchField.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
@@ -105,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\core\Application.h" />
+    <ClInclude Include="3rdparty\qocoa\SearchField.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="src\playlist\PlaylistView.h" />

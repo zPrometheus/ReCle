@@ -17,6 +17,7 @@
 #include <QtWidgets/QWidget>
 #include "playlist/PlaylistTabBar.h"
 #include "playlist/PlaylistView.h"
+#include "qocoa/SearchField.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -30,6 +31,7 @@ public:
     QToolButton *save;
     QToolButton *undo;
     QToolButton *redo;
+    SearchField *filter;
     PlaylistTabBar *tab_bar;
 
     void setupUi(QWidget *playlistcontainer)
@@ -60,6 +62,9 @@ public:
         redo = new QToolButton(toolbar);
         redo->setObjectName(QStringLiteral("redo"));
         redo->setGeometry(QRect(130, 0, 31, 31));
+        filter = new SearchField(toolbar);
+        filter->setObjectName(QStringLiteral("filter"));
+        filter->setGeometry(QRect(160, 0, 801, 31));
         tab_bar = new PlaylistTabBar(playlistcontainer);
         tab_bar->setObjectName(QStringLiteral("tab_bar"));
         tab_bar->setGeometry(QRect(0, 0, 1161, 16));

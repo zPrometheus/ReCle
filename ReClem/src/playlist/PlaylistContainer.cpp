@@ -6,10 +6,15 @@
 #include <qlabel.h>
 #include <qsettings.h>
 #include <qtimeline.h>
+#include <qtimer.h>
+
+const char* PlaylistContainer::kSettingsGroup = "playlist";
+const int PlaylistContainer::kFilterDelayMs = 100;
 
 PlaylistContainer::PlaylistContainer(QWidget* parent)
 	:QWidget(parent),mUndo(nullptr),mRedo(nullptr),
-	mNoMatchesLabel(nullptr),
+	mNoMatchesLabel(nullptr),mDirty(false),mTabBarAnimation(new QTimeLine(500,this)),
+	mFilterTimer(new QTimer(this)),
 	ui(new Ui_playlistcontainer)
 {
 	ui->setupUi(this);
@@ -40,14 +45,38 @@ PlaylistContainer::PlaylistContainer(QWidget* parent)
 	ui->tab_bar->setExpanding(false);
 	ui->tab_bar->setMovable(true);
 
-	//connect(mTabBarAnimation, SIGNAL(frameChanged(int)), SLOT(SetTabBarHeight(int)));
+	connect(mTabBarAnimation, SIGNAL(frameChanged(int)), SLOT(SetTabBarHeight(int)));
 	ui->tab_bar->setMaximumHeight(0);
 
 	// Connections
 	connect(ui->tab_bar, SIGNAL(currentChanged(int)), SLOT(DirtyTabBar()));
 	connect(ui->tab_bar, SIGNAL(Save(int)), SLOT(SavePlaylist(int)));
 
+	mFilterTimer.setSingleShot(true);
+	mFilterTimer.setInterval(kFilterDelayMs);
+	connect(mFilterTimer, SIGNAL(timeout()), this, SLOT(UpdateFilter()));
 
+	connect(ui->filter, SIGNAL(textChanged(QString)), SLOT(MaybeUpdateFilter()));
+	connect(ui->playlist, SIGNAL(FocusOnFilterSignal(QKeyEvent*)),
+		SLOT(FocusOnFilter(QKeyEvent*)));
+
+	ui->filter->installEventFilter(this);
+
+}
+
+void PlaylistContainer::UpdateFilter()
+{
+
+
+}
+
+void PlaylistContainer::Save(QSettings* settings) {
+  if (mStartingUp || !mDirty) return;
+  mDirty = false;
+
+  settings->beginGroup(kSettingsGroup);
+  settings->setValue("current_playlist", ui->tab_bar->current_id());
+  settings->endGroup();
 }
 
 void PlaylistContainer::SetTabBarHeight(int height)

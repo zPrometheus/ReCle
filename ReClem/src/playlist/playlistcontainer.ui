@@ -103,6 +103,16 @@
      <string>...</string>
     </property>
    </widget>
+   <widget class="SearchField" name="filter" native="true">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>0</y>
+      <width>801</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="PlaylistTabBar" name="tab_bar" native="true">
    <property name="geometry">
@@ -125,6 +135,12 @@
    <class>PlaylistTabBar</class>
    <extends>QWidget</extends>
    <header>playlist/PlaylistTabBar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SearchField</class>
+   <extends>QWidget</extends>
+   <header>qocoa/SearchField.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

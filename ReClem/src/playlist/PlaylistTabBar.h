@@ -8,7 +8,7 @@ class PlaylistTabBar : public QTabBar
 public:
 	PlaylistTabBar(QWidget* parent= nullptr);
 	~PlaylistTabBar();
-
+	int current_id() const;
 private:
 	QAction* mNew;
 	QAction* mRename;
