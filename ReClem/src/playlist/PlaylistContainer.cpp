@@ -7,7 +7,7 @@
 #include <qsettings.h>
 #include <qtimeline.h>
 #include <qtimer.h>
-
+#include <qobject.h>
 const char* PlaylistContainer::kSettingsGroup = "playlist";
 const int PlaylistContainer::kFilterDelayMs = 100;
 
@@ -52,8 +52,8 @@ PlaylistContainer::PlaylistContainer(QWidget* parent)
 	connect(ui->tab_bar, SIGNAL(currentChanged(int)), SLOT(DirtyTabBar()));
 	connect(ui->tab_bar, SIGNAL(Save(int)), SLOT(SavePlaylist(int)));
 
-	mFilterTimer.setSingleShot(true);
-	mFilterTimer.setInterval(kFilterDelayMs);
+	mFilterTimer->setSingleShot(true);
+	mFilterTimer->setInterval(kFilterDelayMs);
 	connect(mFilterTimer, SIGNAL(timeout()), this, SLOT(UpdateFilter()));
 
 	connect(ui->filter, SIGNAL(textChanged(QString)), SLOT(MaybeUpdateFilter()));

@@ -28,7 +28,7 @@ private:
 	bool mDirty;
 	bool mStartingUp;
 	Application* mApp;
-	QTimer mFilterTimer;
+	QTimer* mFilterTimer;
 
 	private slots:
 	void SetTabBarHeight(int height);
