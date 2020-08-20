@@ -86,9 +86,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="3rdparty\qocoa\SearchField.cpp" />
+    <ClCompile Include="src\playlist\Playlist.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
+    <ClCompile Include="src\widgets\StretchHeaderView.cpp" />
     <QtRcc Include="ReClem.qrc" />
     <QtUic Include="ReClem.ui" />
     <QtMoc Include="ReClem.h" />
@@ -105,8 +107,10 @@
     <QtMoc Include="src\playlist\PlaylistContainer.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="src\widgets\StretchHeaderView.h" />
     <QtMoc Include="src\core\Application.h" />
     <ClInclude Include="3rdparty\qocoa\SearchField.h" />
+    <QtMoc Include="src\playlist\Playlist.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="src\playlist\PlaylistView.h" />
