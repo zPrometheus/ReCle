@@ -15,6 +15,8 @@ public:
 	void setModel(QAbstractItemModel* model);
 
 	bool isStretchEnabled() const { return mStretchEnabled; };
+
+	bool RestoreState(const QByteArray& data);
 private:
 	bool mStretchEnabled;
 	bool mInMouseMoveEvent;
