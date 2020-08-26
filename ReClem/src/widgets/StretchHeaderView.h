@@ -17,13 +17,17 @@ public:
 	bool isStretchEnabled() const { return mStretchEnabled; };
 
 	bool RestoreState(const QByteArray& data);
+
+signals:
+	void StretchEnabledChanged(bool enabled);
 private:
 	bool mStretchEnabled;
 	bool mInMouseMoveEvent;
 	QVector<ColumnWidthType> mColumnWidths;
 
-
-
+private:
+	void NormaliseWidths(const QList<int>& sections = QList<int>());
+	void UpdateWidths(const QList<int>& sections = QList<int>());
 	private slots:
 	void SectionResized(int logical, int OldSize, int NewSize);
 	

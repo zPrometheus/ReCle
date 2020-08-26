@@ -26,8 +26,62 @@ void StretchHeaderView::SectionResized(int logical, int OldSize, int NewSize)
 				LogicalSectionsToResize << i;
 		}
 		//......to be continued ,
+		if (!LogicalSectionsToResize.isEmpty()) {
+			mInMouseMoveEvent = false;
+			UpdateWidths(LogicalSectionsToResize);
+			NormaliseWidths(LogicalSectionsToResize);
+			mInMouseMoveEvent = true;
+		}
+	}
 
+}
 
+void StretchHeaderView::UpdateWidths(const QList<int>& sections)
+{
+	if (!mStretchEnabled) return;
+	ColumnWidthType TotalW = 0.0;
+
+	for (int i = 0; i < mColumnWidths.count(); i++)
+	{
+		const ColumnWidthType w = mColumnWidths[i];
+		int pixels = w * width();
+
+		if (pixels != 0 && TotalW - int(TotalW) > 0.5) pixels++;
+
+		TotalW += w;
+
+		if (!sections.isEmpty() && !sections.contains(i)) continue;
+
+		if (pixels == 0 && !isSectionHidden(i))
+			hideSection(i);
+		else if (pixels != 0 && isSectionHidden(i))
+			showSection(i);
+		if (pixels != 0)
+			resizeSection(i, pixels);
+	}
+
+}
+
+void StretchHeaderView::NormaliseWidths(const QList<int> & sections)
+{
+	if (!mStretchEnabled) return;
+
+	const ColumnWidthType TotalSum =
+		std::accumulate(mColumnWidths.begin(), mColumnWidths.end(), 0.0);
+	ColumnWidthType SelectedSum = TotalSum;
+
+	if (!sections.isEmpty())
+	{
+		SelectedSum = 0.0;
+		for (int i = 0; i < count(); i++)
+			if (sections.contains(i)) SelectedSum += mColumnWidths[i];
+	}
+	if (TotalSum != 0.0 && !qFuzzyCompare(TotalSum, 1.0)) {
+		const ColumnWidthType mult =
+			(SelectedSum + (1.0 - TotalSum)) / SelectedSum;
+		for (int i = 0; i < mColumnWidths.count(); ++i) {
+			if (sections.isEmpty() || sections.contains(i)) mColumnWidths[i] *= mult;
+		}
 	}
 
 }
@@ -80,7 +134,7 @@ bool StretchHeaderView::RestoreState(const QByteArray& data)
 		UpdateWidths();
 	}
 
-	emit StretchEnabledChanged(stretch_enabled_);
+	emit StretchEnabledChanged(mStretchEnabled);
 
 	return true;
 }

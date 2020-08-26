@@ -1,6 +1,7 @@
 #pragma once
 #include <qtreeview.h>
 class Playlist;
+class Application;
 class PlaylistView:public QTreeView
 {
 public:
