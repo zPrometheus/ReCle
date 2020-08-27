@@ -2,8 +2,11 @@
 
 
 
-Playlist::Playlist()
+Playlist::Playlist(QObject* parent)
+	:QAbstractListModel(parent)
 {
+
+
 }
 
 

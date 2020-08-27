@@ -6,3 +6,8 @@ PlaylistView::PlaylistView(QWidget* parent)
 
 
 }
+
+Qt::Alignment PlaylistView::ColumnAlignment(int section) const
+{
+	return mColumnAlignment.value(section, Qt::AlignLeft | Qt::AlignHCenter);
+}

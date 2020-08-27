@@ -53,13 +53,13 @@
     <ClCompile Include="3rdparty\qocoa\SearchField.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\playlist\Playlist.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\widgets\StretchHeaderView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\playlist\PlaylistHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\Playlist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,10 +84,13 @@
     <QtMoc Include="src\core\Application.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="src\playlist\Playlist.h">
+    <QtMoc Include="src\widgets\StretchHeaderView.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="src\widgets\StretchHeaderView.h">
+    <QtMoc Include="src\playlist\PlaylistHeader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\Playlist.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -102,9 +105,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="3rdparty\qocoa\SearchField.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\playlist\PlaylistHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

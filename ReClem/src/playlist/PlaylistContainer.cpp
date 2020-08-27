@@ -21,7 +21,7 @@ PlaylistContainer::PlaylistContainer(QWidget* parent)
 	mNoMatchesLabel = new QLabel(ui->playlist);
 	mNoMatchesLabel->setAttribute(Qt::WA_TransparentForMouseEvents);//
 	mNoMatchesLabel->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
-	mNoMatchesLabel->setText("avd");
+	mNoMatchesLabel->setText("no matches label is here");
 	
 	QPalette NoMatcherPalette = mNoMatchesLabel->palette();
 	const QColor NoMatcherColor = NoMatcherPalette.color(QPalette::Disabled, QPalette::Text);
