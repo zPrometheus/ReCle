@@ -77,9 +77,35 @@ void PlaylistHeader::contextMenuEvent(QContextMenuEvent* e)
 	}
 
 void PlaylistHeader::AddColumnAction(int index) {
+#ifndef HAVE_MOODBAR
+	if (index == Playlist::Column_Mood)
+		return;
+#endif
 
+	QString title(model()->headerData(index, Qt::Horizontal).toString());
 
+	QAction* action = mMenu->addAction(title);
+	action->setCheckable(true);
+	action->setChecked(!isSectionHidden(index));
+	mShowAction << action;
 
+	connect(action, &QAction::triggered,
+		[this, index]() { ToggleVisible(index); });
+
+}
+
+void PlaylistHeader::ToggleVisible(int section)
+{
+	SetSectionHiddenOrShow(section, !isSectionHidden(section));
+	emit SectionVisibilityChanged(section, !isSectionHidden(section));
+}
+
+void PlaylistHeader::enterEvent(QEvent*) { emit MouseEntered(); }
+
+void PlaylistHeader::HideCurrent() {
+	if (mMenuSection == -1) return;
+
+	SetSectionHiddenOrShow(mMenuSection, true);
 }
 
 PlaylistHeader::~PlaylistHeader()

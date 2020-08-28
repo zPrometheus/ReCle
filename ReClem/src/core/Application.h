@@ -15,9 +15,13 @@ class Application:public QObject
 {
 	Q_OBJECT
 public:
+	static bool kIsPortable;
+	static const char* kPortableDataDir;
+
 	Application(QObject* parent);
 	~Application();
 
+	static bool IsPortable() { return kIsPortable; }
 
 	void DirtySettings();
 

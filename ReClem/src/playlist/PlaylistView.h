@@ -2,6 +2,7 @@
 #include <qtreeview.h>
 #include "Playlist.h"
 class Application;
+class PlaylistHeader;
 class PlaylistView:public QTreeView
 {
 public:
@@ -25,5 +26,6 @@ public:
 private:
 	bool mReadOnlySettings;
 	ColumnAlignmentMap mColumnAlignment;
+	PlaylistHeader* mHeader;
 };
 

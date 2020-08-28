@@ -4,16 +4,28 @@ class PlaylistView;
 class QMenu;
 class PlaylistHeader : public StretchHeaderView
 {
-public:
+
 	Q_OBJECT
+public:
 	PlaylistHeader(Qt::Orientation orientation,PlaylistView* view,
 		QWidget* parent);
 	~PlaylistHeader();
-
+	
+	void enterEvent(QEvent*);
 	void contextMenuEvent(QContextMenuEvent* e);
+
+
+signals:
+	void SectionVisibilityChanged(int logical, bool visible);
+	void MouseEntered();
+
 
 	private:
 		void AddColumnAction(int index);
+
+		private slots:
+		void ToggleVisible(int section);
+		void HideCurrent();
 private:
 	int mMenuSection;
 	QMenu *mMenu;
@@ -24,5 +36,6 @@ private:
 	QAction* mAlignRightAction;
 	QAction* mAlignCenterAction;
 	PlaylistView* mView;
+	QList<QAction*> mShowAction;
 };
 

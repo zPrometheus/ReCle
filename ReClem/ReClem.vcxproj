@@ -41,7 +41,7 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>D:\Data\vs\code\ReClem\ReClem\3rdparty;D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Data\vs\code\ReClem\ReClem\ui;D:\Data\vs\code\ReClem\ReClem\3rdparty;D:\Data\vs\code\ReClem\ReClem\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
@@ -86,12 +86,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="3rdparty\qocoa\SearchField.cpp" />
+    <ClCompile Include="ui\IconLoader.cpp" />
     <ClCompile Include="src\playlist\Playlist.cpp" />
     <ClCompile Include="src\playlist\PlaylistHeader.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
     <ClCompile Include="src\widgets\StretchHeaderView.cpp" />
+    <ClCompile Include="src\core\Utilities.cpp" />
     <QtRcc Include="ReClem.qrc" />
     <QtUic Include="ReClem.ui" />
     <QtMoc Include="ReClem.h" />
@@ -108,10 +110,12 @@
     <QtMoc Include="src\playlist\PlaylistContainer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\Utilities.h" />
     <QtMoc Include="src\widgets\StretchHeaderView.h" />
     <QtMoc Include="src\core\Application.h" />
     <ClInclude Include="3rdparty\qocoa\SearchField.h" />
     <QtMoc Include="src\playlist\PlaylistHeader.h" />
+    <ClInclude Include="ui\IconLoader.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="resource.h" />
     <QtMoc Include="src\playlist\Playlist.h" />

@@ -18,6 +18,11 @@ public:
 
 	bool RestoreState(const QByteArray& data);
 
+	void HideSection(int logical);
+
+	void ShowSection(int logical);
+
+	void SetSectionHiddenOrShow(int logical, int hidden);
 signals:
 	void StretchEnabledChanged(bool enabled);
 private:

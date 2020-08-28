@@ -144,6 +144,57 @@ void StretchHeaderView::setModel(QAbstractItemModel* model)
 	QHeaderView::setModel(model);
 }
 
+void StretchHeaderView::HideSection(int logical)
+{
+	// Would this hide the last section?
+	bool all_hidden = true;
+	for (int i = 0; i < count(); ++i) {
+		if (i != logical && !isSectionHidden(i) && sectionSize(i) > 0) {
+			all_hidden = false;
+			break;
+		}
+	}
+	if (all_hidden) {
+		return;
+	}
+
+	if (!mStretchEnabled) {
+		hideSection(logical);
+		return;
+	}
+
+	mColumnWidths[logical] = 0.0;
+	NormaliseWidths();
+	UpdateWidths();
+
+}
+
+void StretchHeaderView::ShowSection(int logical)
+{
+	if (!mStretchEnabled) {
+		showSection(logical);
+		return;
+	}
+
+	// How many sections are visible already?
+	int visible_count = 0;
+	for (int i = 0; i < count(); ++i) {
+		if (!isSectionHidden(i)) visible_count++;
+	}
+
+	mColumnWidths[logical] = visible_count == 0 ? 1.0 : 1.0 / visible_count;
+	NormaliseWidths();
+	UpdateWidths();
+
+}
+
+void StretchHeaderView::SetSectionHiddenOrShow(int logical,int hidden)
+{
+	if (hidden)
+		HideSection(logical);
+	else
+		ShowSection(logical);
+}
 StretchHeaderView::~StretchHeaderView()
 {
 
