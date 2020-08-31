@@ -1,8 +1,13 @@
 #pragma once
 #include <QDebug>
 #include <chrono>
+#include <string>
 
-#ifndef QT_NO_DEBUG_STREAM
+#ifdef _MSC_VER // Visual Studio
+#define __PRETTY_FUNCTION__ __FUNCTION__
+#endif
+
+#ifdef QT_NO_DEBUG_STREAM
 #define qLog(level)  \
 	while(false) QNODebug()
 
@@ -40,7 +45,7 @@ namespace logging {
 
 	QDebug CreateLoggerFatal(int line, const char* pretty_function,
 		const char* category);
-	QDebug CreateLoggerError(int line, const char* ,
+	QDebug CreateLoggerError(int line, const char*,
 		const char* category);
 
 #ifdef QT_NO_WARNING_OUTPUT

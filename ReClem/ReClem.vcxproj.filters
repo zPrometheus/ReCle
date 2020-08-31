@@ -27,21 +27,24 @@
     <QtRcc Include="ReClem.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+    <QtUic Include="ReClem.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtMoc Include="ReClem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="ReClem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\playlist\PlaylistTabBar.cpp">
+    <ClCompile Include="3rdparty\qocoa\SearchField.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\playlist\PlaylistContainer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ReClem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\playlist\PlaylistView.cpp">
+    <ClCompile Include="ext\librecle-common\core\logging.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\core\Appearance.cpp">
@@ -50,79 +53,74 @@
     <ClCompile Include="src\core\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="3rdparty\qocoa\SearchField.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\widgets\StretchHeaderView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\playlist\PlaylistHeader.cpp">
+    <ClCompile Include="src\core\Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\playlist\Playlist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ui\IconLoader.cpp">
+    <ClCompile Include="src\playlist\PlaylistContainer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\Utilities.cpp">
+    <ClCompile Include="src\playlist\PlaylistHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistTabBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\IconLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\widgets\StretchHeaderView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="src\playlist\playlistcontainer.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="ReClem.ui">
-      <Filter>Resource Files</Filter>
-    </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="src\playlist\PlaylistContainer.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="src\playlist\PlaylistTabBar.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="ReClem.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="src\core\Application.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="src\widgets\StretchHeaderView.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="src\playlist\PlaylistHeader.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="src\playlist\Playlist.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="3rdparty\qocoa\SearchField.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\playlist\PlaylistView.h">
+    <ClInclude Include="ext\librecle-common\core\logging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\core\Appearance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="3rdparty\qocoa\SearchField.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ui\IconLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\core\Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\playlist\PlaylistView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\IconLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ReClem.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <QtMoc Include="src\core\Application.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\Playlist.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistContainer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistHeader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistTabBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\widgets\StretchHeaderView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\playlist\playlistcontainer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
 </Project>
