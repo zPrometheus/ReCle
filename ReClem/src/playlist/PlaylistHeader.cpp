@@ -102,6 +102,10 @@ void PlaylistHeader::ToggleVisible(int section)
 
 void PlaylistHeader::enterEvent(QEvent*) { emit MouseEntered(); }
 
+void PlaylistHeader::ToggleRatingEditStatus() {
+	emit SectionRatingLockStatusChanged(mRatingLock->isChecked());
+}
+
 void PlaylistHeader::HideCurrent() {
 	if (mMenuSection == -1) return;
 

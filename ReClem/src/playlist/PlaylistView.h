@@ -23,9 +23,22 @@ public:
 
 	void DrawTree(QPainter* painter, const QRegion& region) const;
 	void SetModel(QAbstractItemModel* model);
+
+	private slots:
+	void DirtyGeometry();
+	void SetRatingLockStatus(bool state);
+	void InvalidateCachedCurrentPixmap();
+
+
 private:
 	bool mReadOnlySettings;
 	ColumnAlignmentMap mColumnAlignment;
 	PlaylistHeader* mHeader;
+	QPixmap mCurrentTrackPlay;
+	QPixmap mCurrentTrackPause;
+	QPixmap mCacheCurrentRow;
+	bool mDirtyGeometry;
+	Application* mApp;
+	bool mRatingLocked;
 };
 

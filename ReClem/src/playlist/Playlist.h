@@ -45,5 +45,7 @@ public:
 		Column_OriginalYear,
 		ColumnCount
 	};
+
+	static const char* kSettingsGroup;
 };
 

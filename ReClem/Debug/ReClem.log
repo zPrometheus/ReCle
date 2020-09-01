@@ -1,20 +1,17 @@
-﻿生成启动时间为 2020/8/31 16:26:42。
+﻿生成启动时间为 2020/9/1 15:54:54。
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Build 个目标)。
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1)正在节点 2 上生成“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1:2) (Build 个目标)。
      1>QtRccSetDependencies:
          "D:\Soft\Qt5_11\5.11.2\msvc2015\bin\rcc.exe" --list "ReClem.qrc" > "Debug\rcc_list.txt" 2> nul
+       QtWork:
+         moc src\playlist\PlaylistHeader.h
        ClCompile:
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\ui\IconLoader.cpp "ext\librecle-common\core\logging.cpp"
-         IconLoader.cpp
-         logging.cpp
-     1>d:\data\vs\code\reclem\reclem\src\ui\iconloader.cpp(33): warning C4715: “IconLoader::Load”: 不是所有的控件路径都返回值
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Data\vs\code\ReClem\ReClem\ /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Debug\moc\moc_StretchHeaderView.cpp Debug\moc\moc_PlaylistTabBar.cpp Debug\moc\moc_PlaylistHeader.cpp Debug\moc\moc_PlaylistContainer.cpp Debug\moc\moc_Playlist.cpp Debug\moc\moc_Application.cpp
-         moc_StretchHeaderView.cpp
-         moc_PlaylistTabBar.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\playlist\PlaylistContainer.cpp src\playlist\PlaylistHeader.cpp src\playlist\PlaylistView.cpp
+         PlaylistContainer.cpp
+         PlaylistHeader.cpp
+         PlaylistView.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Data\vs\code\ReClem\ReClem\ /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Debug\moc\moc_PlaylistHeader.cpp
          moc_PlaylistHeader.cpp
-         moc_PlaylistContainer.cpp
-         moc_Playlist.cpp
-         moc_Application.cpp
        Link:
          D:\Soft\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Data\vs\code\ReClem\Debug\ReClem.exe" /NOLOGO /LIBPATH:D:\Soft\Qt5_11\5.11.2\msvc2015\lib /LIBPATH:C:\opensslx86\lib /LIBPATH:"C:\Utils\my_sql\mysql-5.6.11-win32\lib" /LIBPATH:C:\Utils\postgresqlx86\pgsql\lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\qtmaind.lib shell32.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Widgetsd.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Guid.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Data\vs\code\ReClem\Debug\ReClem.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Data\vs\code\ReClem\Debug\ReClem.lib" /MACHINE:X86 /SAFESEH Debug\Appearance.obj
          Debug\Application.obj
@@ -34,14 +31,14 @@
          Debug\moc_ReClem.obj
          Debug\moc_StretchHeaderView.obj
          Debug\moc_PlaylistTabBar.obj
-         Debug\moc_PlaylistHeader.obj
          Debug\moc_PlaylistContainer.obj
          Debug\moc_Playlist.obj
          Debug\moc_Application.obj
+         Debug\moc_PlaylistHeader.obj
          ReClem.vcxproj -> D:\Data\vs\code\ReClem\Debug\ReClem.exe
      1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作。
      1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
 
-已用时间 00:00:07.32
+已用时间 00:00:05.98

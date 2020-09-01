@@ -18,7 +18,7 @@ public:
 signals:
 	void SectionVisibilityChanged(int logical, bool visible);
 	void MouseEntered();
-
+	void SectionRatingLockStatusChanged(bool state);
 
 	private:
 		void AddColumnAction(int index);
@@ -26,6 +26,7 @@ signals:
 		private slots:
 		void ToggleVisible(int section);
 		void HideCurrent();
+		void ToggleRatingEditStatus();
 private:
 	int mMenuSection;
 	QMenu *mMenu;
