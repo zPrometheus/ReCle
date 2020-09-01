@@ -3,8 +3,9 @@
 #include "ui/IconLoader.h"
 #include "core/Application.h"
 #include <qsettings.h>
+#include <QScrollBar>
 
-const char* Playlist::kSettingsGroup = "Playlist";
+const int PlaylistView::kAutoscrollGraceTimeout = 30;  // seconds
 
 PlaylistView::PlaylistView(QWidget* parent)
 	:QTreeView(parent), mHeader(new PlaylistHeader(Qt::Horizontal, this, this))
@@ -42,8 +43,26 @@ PlaylistView::PlaylistView(QWidget* parent)
 	connect(mHeader, SIGNAL(StretchEnabledChanged(bool)),
 		SLOT(StretchChanged(bool)));
 	connect(mHeader, SIGNAL(MouseEntered()), SLOT(RatingHoverOut()));
-}
 
+	mInhibitAutoScrollTimer->setInterval(kAutoscrollGraceTimeout * 1000);
+	mInhibitAutoScrollTimer->setSingleShot(true);
+	connect(mInhibitAutoScrollTimer, SIGNAL(timeout()),
+		SLOT(InhibitAutoscrollTimeout()));
+
+	horizontalScrollBar()->installEventFilter(this);
+	verticalScrollBar()->installEventFilter(this);
+
+	setAlternatingRowColors(true);
+
+	setAttribute(Qt::WA_MacShowFocusRect, false);
+
+	mDynamicContral->hide();
+}
+void PlaylistView::InhibitAutoscrollTimeout() {
+	// For 30 seconds after the user clicks on or scrolls the playlist we promise
+	// not to automatically scroll the view to keep up with a track change.
+	mInhibitAutoscroll = false;
+}
 void PlaylistView::DirtyGeometry()
 {
 	mDirtyGeometry = true;

@@ -11,7 +11,7 @@ public:
 	static const int kStateVersion;
 	static const char* kSettingBackgroundImageType;
 	static const char* kSettingBackgroundImageFilename;
-
+	static const int kAutoscrollGraceTimeout;  // seconds
 	static const int kDefaultBlurRadius;//模糊的半径？
 	static const int kDefaultOpacityLevel;//不透明的级别？
 
@@ -28,7 +28,7 @@ public:
 	void DirtyGeometry();
 	void SetRatingLockStatus(bool state);
 	void InvalidateCachedCurrentPixmap();
-
+	void PlaylistView::InhibitAutoscrollTimeout();
 
 private:
 	bool mReadOnlySettings;
@@ -40,5 +40,7 @@ private:
 	bool mDirtyGeometry;
 	Application* mApp;
 	bool mRatingLocked;
+	QTimer* mInhibitAutoScrollTimer;
+	bool mInhibitAutoscroll;
 };
 
