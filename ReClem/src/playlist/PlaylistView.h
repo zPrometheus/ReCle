@@ -3,6 +3,7 @@
 #include "Playlist.h"
 class Application;
 class PlaylistHeader;
+class QTimeLine;
 class PlaylistView:public QTreeView
 {
 public:
@@ -42,5 +43,7 @@ private:
 	bool mRatingLocked;
 	QTimer* mInhibitAutoScrollTimer;
 	bool mInhibitAutoscroll;
+	QTimeLine* mFadeAnimation;
+	Playlist* mPlist;
 };
 

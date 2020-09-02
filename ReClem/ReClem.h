@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_ReClem.h"
+#include "playlist/PlaylistContainer.h"
 
 class ReClem : public QMainWindow
 {
