@@ -70,6 +70,12 @@ void PlaylistView::InhibitAutoscrollTimeout() {
 	// not to automatically scroll the view to keep up with a track change.
 	mInhibitAutoscroll = false;
 }
+
+void PlaylistView::setModel(QAbstractItemModel* model)
+{
+	QTreeView::setModel(model);
+}
+
 void PlaylistView::DirtyGeometry()
 {
 	mDirtyGeometry = true;

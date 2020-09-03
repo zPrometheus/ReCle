@@ -23,7 +23,8 @@ public:
 	void SetReadOnlySettings(bool readonly) { mReadOnlySettings = readonly; }
 
 	void DrawTree(QPainter* painter, const QRegion& region) const;
-	void SetModel(QAbstractItemModel* model);
+	void setModel(QAbstractItemModel* model);
+	
 
 	private slots:
 	void DirtyGeometry();
@@ -45,5 +46,7 @@ private:
 	bool mInhibitAutoscroll;
 	QTimeLine* mFadeAnimation;
 	Playlist* mPlist;
+
+
 };
 

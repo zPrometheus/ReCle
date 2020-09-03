@@ -77,6 +77,12 @@
     <ClCompile Include="src\widgets\StretchHeaderView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test\TestPlaylistViewModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3rdparty\qocoa\SearchField.h">
@@ -97,6 +103,9 @@
     <ClInclude Include="src\ui\IconLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="test\TestPlaylistViewModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\core\Application.h">
@@ -115,6 +124,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="src\widgets\StretchHeaderView.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistFilter.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

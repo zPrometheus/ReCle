@@ -7,6 +7,9 @@ class QLabel;
 class QTimeLine;
 class Application;
 class QSettings;
+class Playlist;
+class PlaylistView;
+
 
 class PlaylistContainer :public QWidget
 {
@@ -18,6 +21,10 @@ public:
 
 	static const char* kSettingsGroup;
 	static const int kFilterDelayMs;
+
+	PlaylistView* view() const;
+	void setViewModel(Playlist*);
+
 private:
 	Ui_playlistcontainer* ui;
 	QAction* mUndo;
@@ -29,6 +36,8 @@ private:
 	bool mStartingUp;
 	Application* mApp;
 	QTimer* mFilterTimer;
+
+	Playlist* mPlist;
 
 	private slots:
 	void SetTabBarHeight(int height);

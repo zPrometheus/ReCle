@@ -1,5 +1,9 @@
 #pragma once
-#include "qabstractitemmodel.h"
+#include <qabstractitemmodel.h>
+#include <playlist/PlaylistFilter.h>s
+
+class PlaylistFilter;
+class QSortFilterProxyModel;
 
 typedef QMap<int, Qt::Alignment> ColumnAlignmentMap;
 
@@ -47,5 +51,10 @@ public:
 	};
 
 	static const char* kSettingsGroup;
+
+	QSortFilterProxyModel* Playlist::proxy() const;
+
+private:
+	PlaylistFilter* mProxy;
 };
 

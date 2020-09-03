@@ -85,6 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\playlist\PlaylistFilter.cpp" />
     <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Utilities.cpp" />
@@ -95,6 +96,7 @@
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
     <ClCompile Include="src\ui\IconLoader.cpp" />
     <ClCompile Include="src\widgets\StretchHeaderView.cpp" />
+    <ClCompile Include="test\TestPlaylistViewModel.cpp" />
     <QtRcc Include="ReClem.qrc" />
     <QtUic Include="ReClem.ui" />
     <QtMoc Include="ReClem.h" />
@@ -107,10 +109,12 @@
   <ItemGroup>
     <ClInclude Include="3rdparty\qocoa\SearchField.h" />
     <ClInclude Include="ext\librecle-common\core\logging.h" />
+    <QtMoc Include="src\playlist\PlaylistFilter.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="src\core\Utilities.h" />
     <ClInclude Include="src\playlist\PlaylistView.h" />
     <ClInclude Include="src\ui\IconLoader.h" />
+    <ClInclude Include="test\TestPlaylistViewModel.h" />
     <QtMoc Include="src\widgets\StretchHeaderView.h" />
     <QtMoc Include="src\playlist\PlaylistTabBar.h" />
     <QtMoc Include="src\playlist\PlaylistHeader.h" />

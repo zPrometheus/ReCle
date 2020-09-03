@@ -64,6 +64,18 @@ PlaylistContainer::PlaylistContainer(QWidget* parent)
 
 }
 
+PlaylistView* PlaylistContainer::view() const{
+	return ui->playlist;
+}
+
+
+void PlaylistContainer::setViewModel(Playlist* playlist)
+{
+	mPlist = playlist;
+	view()->setModel(playlist->proxy()); //m
+
+}
+
 void PlaylistContainer::UpdateFilter()
 {
 

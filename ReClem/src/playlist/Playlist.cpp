@@ -1,5 +1,5 @@
 #include "Playlist.h"
-
+#include <qsortfilterproxymodel.h>
 
 const char* Playlist::kSettingsGroup = "Playlist";
 Playlist::Playlist(QObject* parent)
@@ -8,7 +8,7 @@ Playlist::Playlist(QObject* parent)
 
 
 }
-
+QSortFilterProxyModel* Playlist::proxy() const { return mProxy; }
 
 Playlist::~Playlist()
 {
