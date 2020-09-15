@@ -1,6 +1,6 @@
 #pragma once
 #include <qabstractitemmodel.h>
-#include <playlist/PlaylistFilter.h>s
+#include <playlist/PlaylistFilter.h>
 
 class PlaylistFilter;
 class QSortFilterProxyModel;

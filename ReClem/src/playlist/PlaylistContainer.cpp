@@ -78,7 +78,7 @@ void PlaylistContainer::setViewModel(Playlist* playlist)
 
 void PlaylistContainer::UpdateFilter()
 {
-
+	
 
 }
 
