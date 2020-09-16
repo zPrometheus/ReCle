@@ -91,6 +91,7 @@
     <ClCompile Include="src\core\Utilities.cpp" />
     <ClCompile Include="src\playlist\Playlist.cpp" />
     <ClCompile Include="src\playlist\PlaylistContainer.cpp" />
+    <ClCompile Include="src\playlist\PlaylistFilterParser.cpp" />
     <ClCompile Include="src\playlist\PlaylistHeader.cpp" />
     <ClCompile Include="src\playlist\PlaylistTabBar.cpp" />
     <ClCompile Include="src\playlist\PlaylistView.cpp" />
@@ -107,11 +108,12 @@
     <QtUic Include="src\playlist\playlistcontainer.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="3rdparty\qocoa\SearchField.h" />
+    <QtMoc Include="3rdparty\qocoa\SearchField.h" />
     <ClInclude Include="ext\librecle-common\core\logging.h" />
     <QtMoc Include="src\playlist\PlaylistFilter.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="src\core\Utilities.h" />
+    <ClInclude Include="src\playlist\PlaylistFilterParser.h" />
     <ClInclude Include="src\playlist\PlaylistView.h" />
     <ClInclude Include="src\ui\IconLoader.h" />
     <ClInclude Include="test\TestPlaylistViewModel.h" />
