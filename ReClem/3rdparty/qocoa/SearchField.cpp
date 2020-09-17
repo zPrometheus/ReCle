@@ -61,7 +61,33 @@ SearchField::SearchField(QWidget *parent) : QWidget(parent)
 	lineEdit->installEventFilter(this);
 }
 
+QString SearchField::placeholderText() const {
+#if QT_VERSION >= 0x040700
+	return pimpl->lineEdit->placeholderText();
+#else
+	return QString();
+#endif
+}
 
+void SearchField::setPlaceholderText(const QString &text)
+{
+	Q_ASSERT(pimpl && pimpl->lineEdit);
+	if (!(pimpl && pimpl->lineEdit))
+		return;
+
+#if QT_VERSION >= 0x040700
+	pimpl->lineEdit->setPlaceholderText(text);
+#endif
+}
+
+QString SearchField::text() const
+{
+	Q_ASSERT(pimpl && pimpl->lineEdit);
+	if (!(pimpl && pimpl->lineEdit))
+		return QString();
+
+	return pimpl->lineEdit->text();
+}
 
 
 SearchField::~SearchField()

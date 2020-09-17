@@ -17,9 +17,12 @@ namespace Utilities {
 					QDir d(QCoreApplication::applicationDirPath());
 					return d.filePath(Application::kPortableDataDir);
 				}
-				return QString("%1/%2").arg(
-					QStandardPaths::writableLocation(QStandardPaths::ConfigLocation),
-					QCoreApplication::organizationName());
+				//QDir d(QDir::currentPath());
+				return QDir::currentPath() + "/data";
+					//QString("%1/%2").arg(
+					/*QStandardPaths::writableLocation(QStandardPaths::ConfigLocation),
+					QCoreApplication::organizationName());*/
+					
 			}break;
 
 			case Path_CacheRoot:

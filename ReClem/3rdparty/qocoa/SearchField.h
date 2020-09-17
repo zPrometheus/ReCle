@@ -12,13 +12,13 @@ public:
 	explicit SearchField(QWidget *parent);
 	~SearchField();
 
-	//QString text() const;
-	//QString placeholderText() const;
+	QString text() const;
+	QString placeholderText() const;
 	//void setFocus(Qt::FocusReason reason);
 
 	//public slots:
 	//void setText(const QString &text);
-	//void setPlaceholderText(const QString &text);
+	void setPlaceholderText(const QString &text);
 	//void clear();
 	//void selectAll();
 	//void setFocus();

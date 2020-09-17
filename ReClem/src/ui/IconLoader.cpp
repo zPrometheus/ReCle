@@ -5,6 +5,7 @@
 #include <QtDebug>
 #include <core/logging.h>
 #include <qdir.h>
+#include "core/logging.h"
 
 QList<int> IconLoader::mSizes;
 QString IconLoader::mCustomIconPath;
@@ -43,8 +44,10 @@ QIcon IconLoader::Load(const QString& name, const IconType& icontype)
 	case Provider: {
 		const QString custom_icon_location = mCustomIconPath
 			+ mIconSubPath.at(icontype);
+		qLog(Debug) << "Base Provider path is" << custom_icon_location;
 		if (QDir(custom_icon_location).exists()) {
 			const QString locate(custom_icon_location + "/%1x%2/%3.png");
+			qLog(Debug) << "icon path is find";
 			for (int size : mSizes) {
 				QString filename_custom(locate.arg(size).arg(size).arg(name));
 
@@ -67,6 +70,7 @@ QIcon IconLoader::Load(const QString& name, const IconType& icontype)
 		// lastfm icons location
 		const QString mCustomFmOtherIconLocation = mCustomIconPath
 			+ mIconSubPath.at(icontype);
+		qLog(Debug) << "Other icons path is" << mCustomFmOtherIconLocation;
 		if (QDir(mCustomFmOtherIconLocation).exists()) {
 			// Try to load icons from the custom icon location initially
 			const QString locate_file(
