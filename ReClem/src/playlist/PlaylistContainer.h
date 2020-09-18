@@ -9,7 +9,7 @@ class Application;
 class QSettings;
 class Playlist;
 class PlaylistView;
-
+class PlaylistManager;
 
 class PlaylistContainer :public QWidget
 {
@@ -38,6 +38,7 @@ private:
 	QTimer* mFilterTimer;
 
 	Playlist* mPlist;
+	PlaylistManager* mManager;
 
 	private slots:
 	void SetTabBarHeight(int height);

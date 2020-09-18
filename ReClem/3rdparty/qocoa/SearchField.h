@@ -16,10 +16,10 @@ public:
 	QString placeholderText() const;
 	//void setFocus(Qt::FocusReason reason);
 
-	//public slots:
+	public slots:
 	//void setText(const QString &text);
 	void setPlaceholderText(const QString &text);
-	//void clear();
+	void clear();
 	//void selectAll();
 	//void setFocus();
 
@@ -29,8 +29,8 @@ signals:
 	void returnPressed();
 
 protected:
-	/*void resizeEvent(QResizeEvent*);
-	bool eventFilter(QObject*, QEvent*);*/
+	void resizeEvent(QResizeEvent*);
+	bool eventFilter(QObject*, QEvent*);
 
 private:
 	friend class SearchFieldPrivate;

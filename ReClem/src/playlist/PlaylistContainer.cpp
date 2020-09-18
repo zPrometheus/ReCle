@@ -2,6 +2,7 @@
 #include "ui_playlistcontainer.h"
 #include "core/Appearance.h"
 #include "core/Application.h"
+#include "playlist/PlaylistManager.h"
 
 #include <qlabel.h>
 #include <qsettings.h>
@@ -15,6 +16,7 @@ PlaylistContainer::PlaylistContainer(QWidget* parent)
 	:QWidget(parent),mUndo(nullptr),mRedo(nullptr),
 	mNoMatchesLabel(nullptr),mDirty(false),mTabBarAnimation(new QTimeLine(500,this)),
 	mFilterTimer(new QTimer(this)),
+	mManager(nullptr),
 	ui(new Ui_playlistcontainer)
 {
 	ui->setupUi(this);
@@ -72,8 +74,14 @@ PlaylistView* PlaylistContainer::view() const{
 void PlaylistContainer::setViewModel(Playlist* playlist)
 {
 	mPlist = playlist;
-	view()->setModel(playlist->proxy()); //m
 
+	playlist->IgnoreSorting(true);  //?
+	view()->setModel(playlist->proxy()); //m
+	view()->SetPlaylist(playlist);
+
+	view()->selectionModel()->select(mManager->current_selection(),
+		QItemSelectionModel::ClearAndSelect);
+	playlist->IgnoreSorting(false);
 }
 
 void PlaylistContainer::UpdateFilter()

@@ -38,36 +38,47 @@ public:
     {
         if (playlistcontainer->objectName().isEmpty())
             playlistcontainer->setObjectName(QStringLiteral("playlistcontainer"));
-        playlistcontainer->resize(954, 844);
+        playlistcontainer->resize(960, 844);
         playlist = new PlaylistView(playlistcontainer);
         playlist->setObjectName(QStringLiteral("playlist"));
-        playlist->setGeometry(QRect(-10, 40, 961, 731));
+        playlist->setGeometry(QRect(-10, 30, 961, 741));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(playlist->sizePolicy().hasHeightForWidth());
+        playlist->setSizePolicy(sizePolicy);
         toolbar = new QFrame(playlistcontainer);
         toolbar->setObjectName(QStringLiteral("toolbar"));
-        toolbar->setGeometry(QRect(-10, 10, 1001, 31));
+        toolbar->setGeometry(QRect(0, 10, 951, 22));
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(toolbar->sizePolicy().hasHeightForWidth());
+        toolbar->setSizePolicy(sizePolicy1);
+        toolbar->setFocusPolicy(Qt::StrongFocus);
         toolbar->setFrameShape(QFrame::StyledPanel);
-        toolbar->setFrameShadow(QFrame::Raised);
+        toolbar->setFrameShadow(QFrame::Sunken);
         create_new = new QToolButton(toolbar);
         create_new->setObjectName(QStringLiteral("create_new"));
-        create_new->setGeometry(QRect(10, 0, 31, 31));
+        create_new->setGeometry(QRect(0, 0, 23, 22));
         load = new QToolButton(toolbar);
         load->setObjectName(QStringLiteral("load"));
-        load->setGeometry(QRect(40, 0, 31, 31));
+        load->setGeometry(QRect(20, 0, 23, 22));
         save = new QToolButton(toolbar);
         save->setObjectName(QStringLiteral("save"));
-        save->setGeometry(QRect(70, 0, 31, 31));
+        save->setGeometry(QRect(40, 0, 23, 22));
         undo = new QToolButton(toolbar);
         undo->setObjectName(QStringLiteral("undo"));
-        undo->setGeometry(QRect(100, 0, 31, 31));
+        undo->setGeometry(QRect(60, 0, 23, 22));
         redo = new QToolButton(toolbar);
         redo->setObjectName(QStringLiteral("redo"));
-        redo->setGeometry(QRect(130, 0, 31, 31));
+        redo->setGeometry(QRect(80, 0, 23, 22));
         filter = new SearchField(toolbar);
         filter->setObjectName(QStringLiteral("filter"));
-        filter->setGeometry(QRect(160, 0, 801, 31));
+        filter->setGeometry(QRect(100, 0, 851, 22));
         tab_bar = new PlaylistTabBar(playlistcontainer);
         tab_bar->setObjectName(QStringLiteral("tab_bar"));
-        tab_bar->setGeometry(QRect(0, 0, 1161, 16));
+        tab_bar->setGeometry(QRect(0, 0, 951, 10));
 
         retranslateUi(playlistcontainer);
 

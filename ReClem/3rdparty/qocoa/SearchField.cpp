@@ -5,6 +5,8 @@
 #include <qpointer.h>
 #include "ui/IconLoader.h"
 #include <qlayout.h>
+#include <qevent.h>
+#include <qapplication.h>
 
 class SearchFieldPrivate : public QObject
 {
@@ -89,7 +91,44 @@ QString SearchField::text() const
 	return pimpl->lineEdit->text();
 }
 
+void SearchField::clear()
+{
+	Q_ASSERT(pimpl && pimpl->lineEdit);
+	if (!(pimpl && pimpl->lineEdit))
+		return;
+
+	pimpl->lineEdit->clear();
+}
+
+void SearchField::resizeEvent(QResizeEvent *resizeEvent)
+{
+	Q_ASSERT(pimpl && pimpl->clearButton && pimpl->lineEdit);
+	if (!(pimpl && pimpl->clearButton && pimpl->lineEdit))
+		return;
+
+	QWidget::resizeEvent(resizeEvent);
+	const int x = pimpl->lineEditFrameWidth();
+	const int y = (height() - pimpl->clearButton->height()) / 2;
+	pimpl->clearButton->move(x, y);
+}
+
+bool SearchField::eventFilter(QObject *o, QEvent *e)
+{
+	if (pimpl && pimpl->lineEdit && o == pimpl->lineEdit) {
+		// Forward some lineEdit events to QSearchField (only those we need for
+		// now, but some might be added later if needed)
+		switch (e->type()) {
+		case QEvent::FocusIn:
+		case QEvent::FocusOut:
+			QApplication::sendEvent(this, e);
+			break;
+		}
+	}
+	return QWidget::eventFilter(o, e);
+}
 
 SearchField::~SearchField()
 {
+
+
 }

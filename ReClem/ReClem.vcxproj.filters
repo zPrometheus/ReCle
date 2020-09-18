@@ -86,6 +86,9 @@
     <ClCompile Include="src\playlist\PlaylistFilterParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\playlist\PlaylistManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ext\librecle-common\core\logging.h">
@@ -133,6 +136,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="3rdparty\qocoa\SearchField.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\playlist\PlaylistManager.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

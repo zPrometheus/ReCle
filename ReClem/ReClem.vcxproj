@@ -85,6 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\playlist\PlaylistManager.cpp" />
     <ClCompile Include="src\playlist\PlaylistFilter.cpp" />
     <ClCompile Include="src\core\Appearance.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
@@ -111,6 +112,7 @@
     <QtMoc Include="3rdparty\qocoa\SearchField.h" />
     <ClInclude Include="ext\librecle-common\core\logging.h" />
     <QtMoc Include="src\playlist\PlaylistFilter.h" />
+    <QtMoc Include="src\playlist\PlaylistManager.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="src\core\Utilities.h" />
     <ClInclude Include="src\playlist\PlaylistFilterParser.h" />
