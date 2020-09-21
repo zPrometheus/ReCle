@@ -1,28 +1,96 @@
-﻿生成启动时间为 2020/9/18 16:40:41。
-     1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2020/9/21 14:12:18。
+     1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>QtVars:
+         WHERE /Q cl.exe
+         ("D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe" -query) 1> props.txt 2> NUL
+         Reading Qt configuration (D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe)
+         ("D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe" "CONFIG -= debug release debug_and_release" "CONFIG += debug" qtvars.pro) 1> qtvars.log 2>&1
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1)正在节点 2 上生成“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1:2) (Build 个目标)。
      1>QtRccSetDependencies:
          "D:\Soft\Qt5_11\5.11.2\msvc2015\bin\rcc.exe" --list "ReClem.qrc" > "Debug\rcc_list.txt" 2> nul
+       QtWork:
+         uic ReClem.ui
+         uic src\playlist\playlistcontainer.ui
+         rcc ReClem.qrc
+         moc ReClem.h
+         moc 3rdparty\qocoa\SearchField.h
+         moc src\playlist\PlaylistFilter.h
+         moc src\playlist\PlaylistManager.h
+          RCC: Warning: No resources in 'D:\Data\vs\code\ReClem\ReClem\ReClem.qrc'.
+         moc src\widgets\StretchHeaderView.h
+         moc src\playlist\PlaylistTabBar.h
+         moc src\playlist\PlaylistHeader.h
+         moc src\playlist\PlaylistContainer.h
+         moc src\playlist\Playlist.h
+         moc src\core\Application.h
        ClCompile:
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\playlist\PlaylistManager.cpp src\playlist\PlaylistContainer.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\core\Song.cpp src\playlist\PlaylistManager.cpp src\playlist\PlaylistFilter.cpp src\core\Appearance.cpp src\core\Application.cpp src\core\Utilities.cpp src\playlist\Playlist.cpp src\playlist\PlaylistContainer.cpp src\playlist\PlaylistFilterParser.cpp src\playlist\PlaylistHeader.cpp src\playlist\PlaylistTabBar.cpp src\playlist\PlaylistView.cpp src\ui\IconLoader.cpp src\widgets\StretchHeaderView.cpp test\TestPlaylistViewModel.cpp 3rdparty\qocoa\SearchField.cpp "ext\librecle-common\core\logging.cpp" ReClem.cpp main.cpp
+         Song.cpp
          PlaylistManager.cpp
+         PlaylistFilter.cpp
+         Appearance.cpp
+         Application.cpp
+         Utilities.cpp
+         Playlist.cpp
          PlaylistContainer.cpp
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(44): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(44): error C2143: 语法错误: 缺少“,”(在“&”的前面) (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(48): error C2027: 使用了未定义类型“Playlist” (编译源文件 src\playlist\PlaylistManager.cpp)
-         d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(6): note: 参见“Playlist”的声明 (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(48): error C2061: 语法错误: 标识符“Path” (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(80): error C2062: 意外的类型“bool”  (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(80): error C2059: 语法错误:“=” (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>d:\data\vs\code\reclem\reclem\src\playlist\PlaylistManager.h(80): error C2238: 意外的标记位于“;”之前 (编译源文件 src\playlist\PlaylistManager.cpp)
-     1>D:\Data\vs\code\ReClem\ReClem\src\playlist/PlaylistManager.h(44): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int (编译源文件 src\playlist\PlaylistContainer.cpp)
-     1>D:\Data\vs\code\ReClem\ReClem\src\playlist/PlaylistManager.h(44): error C2143: 语法错误: 缺少“,”(在“&”的前面) (编译源文件 src\playlist\PlaylistContainer.cpp)
-     1>D:\Data\vs\code\ReClem\ReClem\src\playlist/PlaylistManager.h(80): error C2062: 意外的类型“bool”  (编译源文件 src\playlist\PlaylistContainer.cpp)
-     1>D:\Data\vs\code\ReClem\ReClem\src\playlist/PlaylistManager.h(80): error C2059: 语法错误:“=” (编译源文件 src\playlist\PlaylistContainer.cpp)
-     1>D:\Data\vs\code\ReClem\ReClem\src\playlist/PlaylistManager.h(80): error C2238: 意外的标记位于“;”之前 (编译源文件 src\playlist\PlaylistContainer.cpp)
-     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
-     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
+         PlaylistFilterParser.cpp
+         PlaylistHeader.cpp
+         PlaylistTabBar.cpp
+         PlaylistView.cpp
+         IconLoader.cpp
+         StretchHeaderView.cpp
+         TestPlaylistViewModel.cpp
+         SearchField.cpp
+         logging.cpp
+         ReClem.cpp
+         main.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Data\vs\code\ReClem\ReClem\ /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Debug\rcc\qrc_ReClem.cpp Debug\moc\moc_ReClem.cpp Debug\moc\moc_SearchField.cpp Debug\moc\moc_PlaylistFilter.cpp Debug\moc\moc_PlaylistManager.cpp Debug\moc\moc_StretchHeaderView.cpp Debug\moc\moc_PlaylistTabBar.cpp Debug\moc\moc_PlaylistHeader.cpp Debug\moc\moc_PlaylistContainer.cpp Debug\moc\moc_Playlist.cpp Debug\moc\moc_Application.cpp
+         qrc_ReClem.cpp
+         moc_ReClem.cpp
+         moc_SearchField.cpp
+         moc_PlaylistFilter.cpp
+         moc_PlaylistManager.cpp
+         moc_StretchHeaderView.cpp
+         moc_PlaylistTabBar.cpp
+         moc_PlaylistHeader.cpp
+         moc_PlaylistContainer.cpp
+         moc_Playlist.cpp
+         moc_Application.cpp
+       Link:
+         D:\Soft\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Data\vs\code\ReClem\Debug\ReClem.exe" /NOLOGO /LIBPATH:D:\Soft\Qt5_11\5.11.2\msvc2015\lib /LIBPATH:C:\opensslx86\lib /LIBPATH:"C:\Utils\my_sql\mysql-5.6.11-win32\lib" /LIBPATH:C:\Utils\postgresqlx86\pgsql\lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\qtmaind.lib shell32.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Widgetsd.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Guid.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Data\vs\code\ReClem\Debug\ReClem.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Data\vs\code\ReClem\Debug\ReClem.lib" /MACHINE:X86 /SAFESEH Debug\Song.obj
+         Debug\PlaylistManager.obj
+         Debug\PlaylistFilter.obj
+         Debug\Appearance.obj
+         Debug\Application.obj
+         Debug\Utilities.obj
+         Debug\Playlist.obj
+         Debug\PlaylistContainer.obj
+         Debug\PlaylistFilterParser.obj
+         Debug\PlaylistHeader.obj
+         Debug\PlaylistTabBar.obj
+         Debug\PlaylistView.obj
+         Debug\IconLoader.obj
+         Debug\StretchHeaderView.obj
+         Debug\TestPlaylistViewModel.obj
+         Debug\SearchField.obj
+         Debug\logging.obj
+         Debug\ReClem.obj
+         Debug\main.obj
+         Debug\qrc_ReClem.obj
+         Debug\moc_ReClem.obj
+         Debug\moc_SearchField.obj
+         Debug\moc_PlaylistFilter.obj
+         Debug\moc_PlaylistManager.obj
+         Debug\moc_StretchHeaderView.obj
+         Debug\moc_PlaylistTabBar.obj
+         Debug\moc_PlaylistHeader.obj
+         Debug\moc_PlaylistContainer.obj
+         Debug\moc_Playlist.obj
+         Debug\moc_Application.obj
+         ReClem.vcxproj -> D:\Data\vs\code\ReClem\Debug\ReClem.exe
+     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作。
+     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Rebuild 个目标)的操作。
 
-生成失败。
+已成功生成。
 
-已用时间 00:00:01.54
+已用时间 00:00:13.60

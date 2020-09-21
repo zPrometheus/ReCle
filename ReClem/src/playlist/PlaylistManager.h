@@ -1,6 +1,8 @@
 #pragma once
 #include <qobject.h>
 #include <qitemselectionmodel.h>
+#include "core/Song.h"
+#include "playlist/Playlist.h"
 
 class Application;
 class Playlist;
@@ -77,7 +79,7 @@ public:
 	virtual void RateCurrentSong(int rating) = 0;
 
 //	virtual void PlaySmartPlaylist(smart_playlists::GeneratorPtr generator,
-		bool as_new, bool clear) = 0;
+//		bool as_new, bool clear) = 0;
 
 signals:
 	void PlaylistManagerInitialized();
@@ -109,9 +111,13 @@ class PlaylistManager : public PlaylistManagerInterface
 public:
 	PlaylistManager(Application* app,QObject* parent);
 	~PlaylistManager();
+	int current_id() const { return current_; }
+	QItemSelection current_selection() const { return selection(current_id()); }
+	void SelectionChanged(const QItemSelection& selection);
 
 	public slots:
-
+private:
+	int current_;
 
 };
 

@@ -76,6 +76,12 @@ void PlaylistView::setModel(QAbstractItemModel* model)
 	QTreeView::setModel(model);
 }
 
+void PlaylistView::SetPlaylist(Playlist* playlist)
+{
+	mPlist = playlist;
+	
+}
+
 void PlaylistView::DirtyGeometry()
 {
 	mDirtyGeometry = true;

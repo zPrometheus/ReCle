@@ -82,7 +82,17 @@ void PlaylistContainer::setViewModel(Playlist* playlist)
 	view()->selectionModel()->select(mManager->current_selection(),
 		QItemSelectionModel::ClearAndSelect);
 	playlist->IgnoreSorting(false);
+
+	connect(view()->selectionModel(),
+		SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this,
+		SLOT(SelectionChanged()));
+	emit ViewSelectionModelChanged();
 }
+
+void PlaylistContainer::SelectionChanged() {
+	mManager->SelectionChanged(view()->selectionModel()->selection());
+}
+
 
 void PlaylistContainer::UpdateFilter()
 {
