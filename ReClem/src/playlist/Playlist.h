@@ -4,6 +4,7 @@
 
 class PlaylistFilter;
 class QSortFilterProxyModel;
+class QUndoStack;
 
 typedef QMap<int, Qt::Alignment> ColumnAlignmentMap;
 
@@ -60,11 +61,14 @@ public:
 
 	QSortFilterProxyModel* Playlist::proxy() const;
 
+	QUndoStack* undo_stack() const { return undo_stack_; }
+
 private:
 	PlaylistFilter* mProxy;
 	// Hack to stop QTreeView::setModel sorting the playlist
 	bool mIgnoreSorting;
 
+	QUndoStack* undo_stack_;
 	public slots:
 	void IgnoreSorting(bool value) { mIgnoreSorting = value; };
 };

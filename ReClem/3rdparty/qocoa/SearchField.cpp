@@ -132,3 +132,13 @@ SearchField::~SearchField()
 
 
 }
+
+void SearchField::setText(const QString &text)
+{
+	Q_ASSERT(pimpl && pimpl->clearButton && pimpl->lineEdit);
+	if (!(pimpl && pimpl->clearButton && pimpl->lineEdit))
+		return;
+
+	if (text != this->text())
+		pimpl->lineEdit->setText(text);
+}

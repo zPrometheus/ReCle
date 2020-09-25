@@ -44,8 +44,12 @@ private:
 	void SetTabBarHeight(int height);
 	void DirtyTabBar(void);
 	void UpdateFilter();
-	
+	void SelectionChanged();
+	void UpdateNoMatchesLabel();
+	void RepositionNoMatchesLabel(bool force);
+
 	void Save(QSettings* settings);
-	
+signals:
+	void ViewSelectionModelChanged();
 };
 

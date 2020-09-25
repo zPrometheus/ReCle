@@ -1,0 +1,24 @@
+QMAKE_CXX.INCDIRS = \
+    D:\\Data\\vs\\code\\ReClem\\ReClem\\ext\\librecle-common \
+    D:\\Data\\vs\\code\\ReClem\\ReClem\\3rdparty\\glib-dev_2.26.1-1_win32\\include\\glib-2.0 \
+    D:\\Data\\vs\\code\\ReClem\\ReClem\\3rdparty \
+    D:\\Data\\vs\\code\\ReClem\\ReClem\\src \
+    D:\\Soft\\VS\\VC\\include \
+    D:\\Soft\\VS\\VC\\atlmfc\\include \
+    "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.10150.0\\ucrt" \
+    "C:\\Program Files (x86)\\Windows Kits\\8.1\\Include\\um" \
+    "C:\\Program Files (x86)\\Windows Kits\\8.1\\Include\\shared" \
+    "C:\\Program Files (x86)\\Windows Kits\\8.1\\Include\\winrt"
+QMAKE_CXX.LIBDIRS = \
+    D:\\Soft\\VS\\VC\\lib \
+    D:\\Soft\\VS\\VC\\atlmfc\\lib \
+    "C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.10150.0\\ucrt\\x86" \
+    "C:\\Program Files (x86)\\Windows Kits\\8.1\\lib\\winv6.3\\um\\x86" \
+    "C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.6\\Lib\\um\\x86"
+QMAKE_CXX.QT_COMPILER_STDCXX = 199711L
+QMAKE_CXX.QMAKE_MSC_VER = 1900
+QMAKE_CXX.QMAKE_MSC_FULL_VER = 190023026
+QMAKE_CXX.COMPILER_MACROS = \
+    QT_COMPILER_STDCXX \
+    QMAKE_MSC_VER \
+    QMAKE_MSC_FULL_VER

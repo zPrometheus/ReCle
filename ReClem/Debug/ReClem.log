@@ -1,96 +1,30 @@
-﻿生成启动时间为 2020/9/21 14:12:18。
-     1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Rebuild 个目标)。
+﻿生成启动时间为 2020/9/25 14:30:01。
+     1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Build 个目标)。
      1>QtVars:
          WHERE /Q cl.exe
-         ("D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe" -query) 1> props.txt 2> NUL
-         Reading Qt configuration (D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe)
-         ("D:\Soft\Qt5_11\5.11.2\msvc2015\bin\qmake.exe" "CONFIG -= debug release debug_and_release" "CONFIG += debug" qtvars.pro) 1> qtvars.log 2>&1
+         ("D:/Soft/Qt5_11/5.11.2/msvc2015/bin/qmake" -query) 1> props.txt
+         Reading Qt configuration (D:/Soft/Qt5_11/5.11.2/msvc2015/bin/qmake)
+         ("D:/Soft/Qt5_11/5.11.2/msvc2015/bin/qmake" "CONFIG -= debug release debug_and_release" "CONFIG += debug" qtvars.pro) 1> qtvars.log 2>&1
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1)正在节点 2 上生成“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1:2) (Build 个目标)。
-     1>QtRccSetDependencies:
-         "D:\Soft\Qt5_11\5.11.2\msvc2015\bin\rcc.exe" --list "ReClem.qrc" > "Debug\rcc_list.txt" 2> nul
-       QtWork:
-         uic ReClem.ui
-         uic src\playlist\playlistcontainer.ui
-         rcc ReClem.qrc
-         moc ReClem.h
-         moc 3rdparty\qocoa\SearchField.h
-         moc src\playlist\PlaylistFilter.h
-         moc src\playlist\PlaylistManager.h
-          RCC: Warning: No resources in 'D:\Data\vs\code\ReClem\ReClem\ReClem.qrc'.
-         moc src\widgets\StretchHeaderView.h
-         moc src\playlist\PlaylistTabBar.h
-         moc src\playlist\PlaylistHeader.h
+     1>QtWork:
          moc src\playlist\PlaylistContainer.h
-         moc src\playlist\Playlist.h
-         moc src\core\Application.h
        ClCompile:
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\core\Song.cpp src\playlist\PlaylistManager.cpp src\playlist\PlaylistFilter.cpp src\core\Appearance.cpp src\core\Application.cpp src\core\Utilities.cpp src\playlist\Playlist.cpp src\playlist\PlaylistContainer.cpp src\playlist\PlaylistFilterParser.cpp src\playlist\PlaylistHeader.cpp src\playlist\PlaylistTabBar.cpp src\playlist\PlaylistView.cpp src\ui\IconLoader.cpp src\widgets\StretchHeaderView.cpp test\TestPlaylistViewModel.cpp 3rdparty\qocoa\SearchField.cpp "ext\librecle-common\core\logging.cpp" ReClem.cpp main.cpp
-         Song.cpp
-         PlaylistManager.cpp
-         PlaylistFilter.cpp
-         Appearance.cpp
-         Application.cpp
-         Utilities.cpp
-         Playlist.cpp
-         PlaylistContainer.cpp
-         PlaylistFilterParser.cpp
-         PlaylistHeader.cpp
-         PlaylistTabBar.cpp
-         PlaylistView.cpp
-         IconLoader.cpp
-         StretchHeaderView.cpp
-         TestPlaylistViewModel.cpp
-         SearchField.cpp
-         logging.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ReClem.cpp main.cpp src\playlist\PlaylistContainer.cpp
          ReClem.cpp
          main.cpp
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Data\vs\code\ReClem\ReClem\ /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Debug\rcc\qrc_ReClem.cpp Debug\moc\moc_ReClem.cpp Debug\moc\moc_SearchField.cpp Debug\moc\moc_PlaylistFilter.cpp Debug\moc\moc_PlaylistManager.cpp Debug\moc\moc_StretchHeaderView.cpp Debug\moc\moc_PlaylistTabBar.cpp Debug\moc\moc_PlaylistHeader.cpp Debug\moc\moc_PlaylistContainer.cpp Debug\moc\moc_Playlist.cpp Debug\moc\moc_Application.cpp
-         qrc_ReClem.cpp
-         moc_ReClem.cpp
-         moc_SearchField.cpp
-         moc_PlaylistFilter.cpp
-         moc_PlaylistManager.cpp
-         moc_StretchHeaderView.cpp
-         moc_PlaylistTabBar.cpp
-         moc_PlaylistHeader.cpp
-         moc_PlaylistContainer.cpp
-         moc_Playlist.cpp
-         moc_Application.cpp
-       Link:
-         D:\Soft\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Data\vs\code\ReClem\Debug\ReClem.exe" /NOLOGO /LIBPATH:D:\Soft\Qt5_11\5.11.2\msvc2015\lib /LIBPATH:C:\opensslx86\lib /LIBPATH:"C:\Utils\my_sql\mysql-5.6.11-win32\lib" /LIBPATH:C:\Utils\postgresqlx86\pgsql\lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\qtmaind.lib shell32.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Widgetsd.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Guid.lib D:\Soft\Qt5_11\5.11.2\msvc2015\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Data\vs\code\ReClem\Debug\ReClem.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Data\vs\code\ReClem\Debug\ReClem.lib" /MACHINE:X86 /SAFESEH Debug\Song.obj
-         Debug\PlaylistManager.obj
-         Debug\PlaylistFilter.obj
-         Debug\Appearance.obj
-         Debug\Application.obj
-         Debug\Utilities.obj
-         Debug\Playlist.obj
-         Debug\PlaylistContainer.obj
-         Debug\PlaylistFilterParser.obj
-         Debug\PlaylistHeader.obj
-         Debug\PlaylistTabBar.obj
-         Debug\PlaylistView.obj
-         Debug\IconLoader.obj
-         Debug\StretchHeaderView.obj
-         Debug\TestPlaylistViewModel.obj
-         Debug\SearchField.obj
-         Debug\logging.obj
-         Debug\ReClem.obj
-         Debug\main.obj
-         Debug\qrc_ReClem.obj
-         Debug\moc_ReClem.obj
-         Debug\moc_SearchField.obj
-         Debug\moc_PlaylistFilter.obj
-         Debug\moc_PlaylistManager.obj
-         Debug\moc_StretchHeaderView.obj
-         Debug\moc_PlaylistTabBar.obj
-         Debug\moc_PlaylistHeader.obj
-         Debug\moc_PlaylistContainer.obj
-         Debug\moc_Playlist.obj
-         Debug\moc_Application.obj
-         ReClem.vcxproj -> D:\Data\vs\code\ReClem\Debug\ReClem.exe
-     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作。
-     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Rebuild 个目标)的操作。
+         PlaylistContainer.cpp
+     1>src\playlist\PlaylistContainer.cpp(97): error C2065: “playlist_”: 未声明的标识符
+     1>src\playlist\PlaylistContainer.cpp(97): error C2227: “->proxy”的左边必须指向类/结构/联合/泛型类型
+         src\playlist\PlaylistContainer.cpp(97): note: 类型是“unknown-type”
+     1>src\playlist\PlaylistContainer.cpp(99): error C2065: “playlist_”: 未声明的标识符
+     1>src\playlist\PlaylistContainer.cpp(99): error C2227: “->proxy”的左边必须指向类/结构/联合/泛型类型
+         src\playlist\PlaylistContainer.cpp(99): note: 类型是“unknown-type”
+     1>src\playlist\PlaylistContainer.cpp(101): error C2065: “playlist_”: 未声明的标识符
+     1>src\playlist\PlaylistContainer.cpp(102): error C2065: “playlist_”: 未声明的标识符
+     1>src\playlist\PlaylistContainer.cpp(104): error C2065: “playlist_”: 未声明的标识符
+     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
+     1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
 
-已成功生成。
+生成失败。
 
-已用时间 00:00:13.60
+已用时间 00:00:03.35

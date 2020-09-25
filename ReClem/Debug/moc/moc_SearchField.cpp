@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SearchField_t {
-    QByteArrayData data[9];
-    char stringdata0[101];
+    QByteArrayData data[10];
+    char stringdata0[109];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,13 +37,14 @@ QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 4), // "text"
 QT_MOC_LITERAL(4, 30, 15), // "editingFinished"
 QT_MOC_LITERAL(5, 46, 13), // "returnPressed"
-QT_MOC_LITERAL(6, 60, 18), // "setPlaceholderText"
-QT_MOC_LITERAL(7, 79, 5), // "clear"
-QT_MOC_LITERAL(8, 85, 15) // "placeholderText"
+QT_MOC_LITERAL(6, 60, 7), // "setText"
+QT_MOC_LITERAL(7, 68, 18), // "setPlaceholderText"
+QT_MOC_LITERAL(8, 87, 5), // "clear"
+QT_MOC_LITERAL(9, 93, 15) // "placeholderText"
 
     },
     "SearchField\0textChanged\0\0text\0"
-    "editingFinished\0returnPressed\0"
+    "editingFinished\0returnPressed\0setText\0"
     "setPlaceholderText\0clear\0placeholderText"
 };
 #undef QT_MOC_LITERAL
@@ -54,21 +55,22 @@ static const uint qt_meta_data_SearchField[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
-       1,   48, // properties
+       6,   14, // methods
+       1,   56, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x06 /* Public */,
-       4,    0,   42,    2, 0x06 /* Public */,
-       5,    0,   43,    2, 0x06 /* Public */,
+       1,    1,   44,    2, 0x06 /* Public */,
+       4,    0,   47,    2, 0x06 /* Public */,
+       5,    0,   48,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    1,   44,    2, 0x0a /* Public */,
-       7,    0,   47,    2, 0x0a /* Public */,
+       6,    1,   49,    2, 0x0a /* Public */,
+       7,    1,   52,    2, 0x0a /* Public */,
+       8,    0,   55,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -77,10 +79,11 @@ static const uint qt_meta_data_SearchField[] = {
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void,
 
  // properties: name, type, flags
-       8, QMetaType::QString, 0x00095103,
+       9, QMetaType::QString, 0x00095103,
 
        0        // eod
 };
@@ -94,8 +97,9 @@ void SearchField::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 1: _t->editingFinished(); break;
         case 2: _t->returnPressed(); break;
-        case 3: _t->setPlaceholderText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 4: _t->clear(); break;
+        case 3: _t->setText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 4: _t->setPlaceholderText((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 5: _t->clear(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -169,13 +173,13 @@ int SearchField::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 6;
     }
 #ifndef QT_NO_PROPERTIES
    else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty

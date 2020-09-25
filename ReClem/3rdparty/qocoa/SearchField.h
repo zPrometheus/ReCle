@@ -17,7 +17,7 @@ public:
 	//void setFocus(Qt::FocusReason reason);
 
 	public slots:
-	//void setText(const QString &text);
+	void setText(const QString &text);
 	void setPlaceholderText(const QString &text);
 	void clear();
 	//void selectAll();

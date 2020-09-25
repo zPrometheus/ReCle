@@ -114,10 +114,21 @@ public:
 	int current_id() const { return current_; }
 	QItemSelection current_selection() const { return selection(current_id()); }
 	void SelectionChanged(const QItemSelection& selection);
+	void PlaylistManager::UpdateSummaryText();
 
 	public slots:
 private:
+	struct Data {
+		Data(Playlist* _p = nullptr, const QString& _name = QString())
+			: p(_p), name(_name) {}
+		Playlist* p;
+		QString name;
+		QItemSelection selection;
+	};
+
 	int current_;
+	QMap<int, Data> playlists_;
+
 
 };
 
