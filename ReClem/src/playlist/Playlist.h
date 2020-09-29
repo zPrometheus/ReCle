@@ -63,13 +63,21 @@ public:
 
 	QUndoStack* undo_stack() const { return undo_stack_; }
 
+	SongList GetAllSongs() const;
+
+	int id() const { return id_; }
+	bool is_favorite() const { return favorite_; }
 private:
 	PlaylistFilter* mProxy;
 	// Hack to stop QTreeView::setModel sorting the playlist
 	bool mIgnoreSorting;
 
 	QUndoStack* undo_stack_;
+
+	int id_;
+	bool favorite_;
 	public slots:
 	void IgnoreSorting(bool value) { mIgnoreSorting = value; };
+	
 };
 

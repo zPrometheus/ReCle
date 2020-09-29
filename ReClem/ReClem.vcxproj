@@ -85,6 +85,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="PlaylistItem.cpp" />
+    <ClCompile Include="src\widgets\RenameTabLineEdit.cpp" />
     <ClCompile Include="src\core\Song.cpp" />
     <ClCompile Include="src\playlist\PlaylistManager.cpp" />
     <ClCompile Include="src\playlist\PlaylistFilter.cpp" />
@@ -114,6 +116,8 @@
     <ClInclude Include="ext\librecle-common\core\logging.h" />
     <QtMoc Include="src\playlist\PlaylistFilter.h" />
     <QtMoc Include="src\playlist\PlaylistManager.h" />
+    <QtMoc Include="src\widgets\RenameTabLineEdit.h" />
+    <ClInclude Include="PlaylistItem.h" />
     <ClInclude Include="src\core\Song.h" />
     <ClInclude Include="src\core\Appearance.h" />
     <ClInclude Include="src\core\Utilities.h" />

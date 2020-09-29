@@ -1,4 +1,4 @@
-﻿生成启动时间为 2020/9/25 14:30:01。
+﻿生成启动时间为 2020/9/28 10:17:02。
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”在节点 2 上(Build 个目标)。
      1>QtVars:
          WHERE /Q cl.exe
@@ -7,24 +7,40 @@
          ("D:/Soft/Qt5_11/5.11.2/msvc2015/bin/qmake" "CONFIG -= debug release debug_and_release" "CONFIG += debug" qtvars.pro) 1> qtvars.log 2>&1
      1>项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1)正在节点 2 上生成“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(1:2) (Build 个目标)。
      1>QtWork:
-         moc src\playlist\PlaylistContainer.h
+         uic ReClem.ui
+         uic src\playlist\playlistcontainer.ui
+         rcc ReClem.qrc
+         moc ReClem.h
+         moc 3rdparty\qocoa\SearchField.h
+         moc src\playlist\PlaylistFilter.h
+         moc src\playlist\PlaylistManager.h
+          RCC: Warning: No resources in 'D:\Data\vs\code\ReClem\ReClem\ReClem.qrc'.
+         moc src\widgets\RenameTabLineEdit.h
+         moc src\widgets\StretchHeaderView.h
+         moc src\playlist\PlaylistTabBar.h
+         moc src\playlist\PlaylistHeader.h
+         moc src\playlist\Playlist.h
+         moc src\core\Application.h
        ClCompile:
-         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ReClem.cpp main.cpp src\playlist\PlaylistContainer.cpp
+         D:\Soft\VS\VC\bin\CL.exe /c /IDebug\uic /IDebug\moc /ID:\Soft\Qt5_11\5.11.2\msvc2015\include /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtWidgets /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtGui /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtANGLE /ID:\Soft\Qt5_11\5.11.2\msvc2015\include\QtCore /I\include /I"D:\Soft\Qt5_11\5.11.2\msvc2015\mkspecs\win32-msvc" /IDebug\moc /IDebug\uic /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D _UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\widgets\RenameTabLineEdit.cpp src\playlist\PlaylistManager.cpp src\playlist\PlaylistFilter.cpp src\playlist\Playlist.cpp src\playlist\PlaylistContainer.cpp src\playlist\PlaylistFilterParser.cpp src\playlist\PlaylistHeader.cpp src\playlist\PlaylistTabBar.cpp src\playlist\PlaylistView.cpp ReClem.cpp main.cpp
+         RenameTabLineEdit.cpp
+         PlaylistManager.cpp
+         PlaylistFilter.cpp
+         Playlist.cpp
+         PlaylistContainer.cpp
+         PlaylistFilterParser.cpp
+         PlaylistHeader.cpp
+     1>src\playlist\PlaylistContainer.cpp(129): error C3861: “UndoRedoActionsChanged”: 找不到标识符
+         PlaylistTabBar.cpp
+         PlaylistView.cpp
          ReClem.cpp
          main.cpp
-         PlaylistContainer.cpp
-     1>src\playlist\PlaylistContainer.cpp(97): error C2065: “playlist_”: 未声明的标识符
-     1>src\playlist\PlaylistContainer.cpp(97): error C2227: “->proxy”的左边必须指向类/结构/联合/泛型类型
-         src\playlist\PlaylistContainer.cpp(97): note: 类型是“unknown-type”
-     1>src\playlist\PlaylistContainer.cpp(99): error C2065: “playlist_”: 未声明的标识符
-     1>src\playlist\PlaylistContainer.cpp(99): error C2227: “->proxy”的左边必须指向类/结构/联合/泛型类型
-         src\playlist\PlaylistContainer.cpp(99): note: 类型是“unknown-type”
-     1>src\playlist\PlaylistContainer.cpp(101): error C2065: “playlist_”: 未声明的标识符
-     1>src\playlist\PlaylistContainer.cpp(102): error C2065: “playlist_”: 未声明的标识符
-     1>src\playlist\PlaylistContainer.cpp(104): error C2065: “playlist_”: 未声明的标识符
+     1>src\playlist\PlaylistTabBar.cpp(166): error C2039: “GetAllSongs”: 不是“Playlist”的成员
+         d:\data\vs\code\reclem\reclem\src\playlist\playlistmanager.h(8): note: 参见“Playlist”的声明
+     1>src\playlist\PlaylistTabBar.cpp(166): error C2228: “.empty”的左边必须有类/结构/联合
      1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
      1>已完成生成项目“D:\Data\vs\code\ReClem\ReClem\ReClem.vcxproj”(Build 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:03.35
+已用时间 00:00:11.75

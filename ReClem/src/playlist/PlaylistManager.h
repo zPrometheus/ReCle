@@ -116,6 +116,10 @@ public:
 	void SelectionChanged(const QItemSelection& selection);
 	void PlaylistManager::UpdateSummaryText();
 
+	bool IsPlaylistFavorite(int index) const {
+		return playlists_[index].p->is_favorite();
+	}
+
 	public slots:
 private:
 	struct Data {
